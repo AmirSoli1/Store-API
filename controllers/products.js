@@ -24,7 +24,6 @@ const getAllProducts = async (req, res) => {
     filters = filters.split(',').forEach((element) => {
       const [field, op, num] = element.split('-');
       if (options.includes(field)) queryObject[field] = { [op]: Number(num) };
-      console.log(field, op, num);
     });
   }
 
